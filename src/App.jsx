@@ -16,7 +16,7 @@ function App() {
         <Hola />
         <Mundo />
         </p> */}
-      <div>
+      <div id="APP">
         <Grilla />
       </div>
     </>

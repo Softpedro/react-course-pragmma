@@ -2,9 +2,15 @@ import PedroMollehuanca from "../PedroMollehuanca";
 
 const Grilla = () => {
   return (
-    <>
-      <PedroMollehuanca />
-    </>
+    <section id="sectionPedro">
+      <PedroMollehuanca
+        nombre={"Pedro"}
+        rol={"Desarrollador"}
+        anios={32}
+        trabajo={"empleado"}
+        pais={"Perú"}
+      />
+    </section>
   );
 };
 
