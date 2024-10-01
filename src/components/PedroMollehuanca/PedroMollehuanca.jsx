@@ -7,8 +7,8 @@ const PedroMollehuanca = ({ nombre, anios, rol, trabajo, pais }) => {
   const [flagWork, setFlagWork] = useState(true);
   const [auth, setAuth] = useState(false);
   const [hobbies, setHobbies] = useState(false);
-
   const hobbiesList = ["futbol", "natacion", "cine"];
+
   const sumarAge = (age) => {
     return age + 10;
   };
@@ -42,7 +42,7 @@ const PedroMollehuanca = ({ nombre, anios, rol, trabajo, pais }) => {
       <p>{rol}</p>
       <p>{sumarAge(anios)}</p>
       <p>{pais}</p>
-      <p>{trabajo ? "Empleado" : "Desempleado"}</p>
+      <p>{trabajo ? "trabajando" : "no trabajo"}</p>
       <hr />
       <div style={{ display: "flex" }}>
         <button type="button" onClick={onClickMe}>
@@ -75,9 +75,4 @@ PedroMollehuanca.propTypes = {
   trabajo: PropTypes.string.isRequired,
   pais: PropTypes.string,
 };
-
-// PedroMollehuanca.defaultProps = {
-//   pais: "Colombia",
-// };
-
 export default PedroMollehuanca;
