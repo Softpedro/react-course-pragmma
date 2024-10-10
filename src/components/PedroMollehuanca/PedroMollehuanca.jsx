@@ -5,9 +5,13 @@ import Child from "./components/Child";
 const PedroMollehuanca = ({ nombre, anios, rol, trabajo, pais }) => {
   const [expLaboral, setExpLaboral] = useState(1);
   const [flagWork, setFlagWork] = useState(true);
-  const [auth, setAuth] = useState(false);
+  // const [auth, setAuth] = useState(false);
   const [hobbies, setHobbies] = useState(false);
   const hobbiesList = ["futbol", "natacion", "cine"];
+
+  // useEffect(() => {
+  //   console.log("componente montado y actualizado por auth");
+  // }, [auth]);
 
   const sumarAge = (age) => {
     return age + 10;
@@ -15,24 +19,15 @@ const PedroMollehuanca = ({ nombre, anios, rol, trabajo, pais }) => {
 
   const onClickMe = () => {
     setExpLaboral(expLaboral + 1);
-    console.log("click me");
   };
 
   const changeFlag = () => {
     setFlagWork(!flagWork);
   };
 
-  const initSession = () => {
-    setAuth(true);
-  };
-
   const flagHobbies = () => {
     setHobbies(!hobbies);
   };
-
-  if (auth === false) {
-    return <button onClick={initSession}>Iniciar Sesion</button>;
-  }
 
   return (
     <article>

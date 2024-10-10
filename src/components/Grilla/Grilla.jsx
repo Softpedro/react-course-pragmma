@@ -10,6 +10,11 @@ const Grilla = () => {
   const returnBgColor = () => (darkMode ? "#08181c" : "#f0f0f0");
   const returnColor = () => (darkMode ? "#f0f0f0" : "#08181c");
 
+  // const sumaDeDosNumeros = (a, b) => {
+  //   const resultado = a + b;
+  //   return resultado;
+  // };
+
   return (
     <div
       style={{
