@@ -1,12 +1,14 @@
 import PropTypes from "prop-types";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Child from "./components/Child";
+import { UserContext } from "../../UserContext";
 
 const PedroMollehuanca = ({ nombre, anios, rol, trabajo, pais }) => {
   const [expLaboral, setExpLaboral] = useState(1);
   const [flagWork, setFlagWork] = useState(true);
   // const [auth, setAuth] = useState(false);
   const [hobbies, setHobbies] = useState(false);
+  const { user } = useContext(UserContext);
   const hobbiesList = ["futbol", "natacion", "cine"];
 
   // useEffect(() => {
@@ -31,7 +33,7 @@ const PedroMollehuanca = ({ nombre, anios, rol, trabajo, pais }) => {
 
   return (
     <article>
-      <h2>{nombre}</h2>
+      <h2>{user.name}</h2>
       <p>{expLaboral}</p>
       <hr />
       <p>{rol}</p>
